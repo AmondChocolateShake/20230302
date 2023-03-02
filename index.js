@@ -88,9 +88,9 @@ const firstSectionChildSt={
   bottom: "0",
   left: "0",
   transform: "0",
-  display: "0",
-  justifyContent: "0",
-  alignItems: "0"
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 }
 
 const lastSectionChildSt={
@@ -103,9 +103,9 @@ const lastSectionChildSt={
   bottom: "0",
   left: "0",
   transform: "0",
-  display: "0",
-  justifyContent: "0",
-  alignItems: "0"
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 }
 
 
@@ -118,11 +118,11 @@ function CreateNewElement(EName){
     return element;
 }
 
-
+//for문을 이용해서 스타일링 하고싶은데 감이 안옵니다.
 function setStyle(element,style){
   if(!style.width=="0")element.style.width= style.width;
   if(!style.height=="0")element.style.height= style.height;
-  if(!style.backgrounColor=="0")element.style.backgroundColor= style.backgroundColor;
+  if(!style.backgroundColor=="0")element.style.backgroundColor= style.backgroundColor;
   if(!style.border=="0")element.style.border= style.border;
   if(!style.borderRadius=="0")element.style.borderRadius= style.borderRadius;
   if(!style.position=="0")element.style.position= style.position;
@@ -164,11 +164,16 @@ function createRightSect(){
   rightElement.setAttribute("id","right-sec");
   rightElement.appendChild(CreateNewElement("ul"));
   setStyle(rightElement,lastSectionChildSt);
-  setStyle(rightElement.children[0],listSt);
 
   return rightElement;
 }
 
+function sectionInit(element){
+  element.style.display= flex;
+  element.style.justifyContent= center;
+  element.style.alignItems= center;
+
+}
 
 
 /* root 엘리멘트 영역 생성 */
@@ -182,10 +187,7 @@ setStyle(main,mainSt);
 
 // 좌우 섹션 생성 및 스타일링
 let leftSect=createLeftSect();
-setStyle(leftSect,sectionSt);
 let rightSect=createRightSect();
-setStyle(rightSect,sectionSt);
-
 main.appendChild(leftSect);
 main.appendChild(rightSect);
 root.appendChild(main);
