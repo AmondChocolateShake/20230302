@@ -120,18 +120,18 @@ function CreateNewElement(EName){
 
 
 function setStyle(element,style){
-  if(!style.width=="NULL")element.style.width= style.width;
-  if(!style.height=="NULL")element.style.height= style.height;
-  if(!style.backgrounColor=="NULL")element.style.backgroundColor= style.backgroundColor;
-  if(!style.border=="NULL")element.style.border= style.border;
-  if(!style.borderRadius=="NULL")element.style.borderRadius= style.borderRadius;
-  if(!style.position=="NULL")element.style.position= style.position;
-  if(!style.bottom=="NULL")element.style.bottom= style.bottom;
-  if(!style.left=="NULL")element.style.left= style.left;
-  if(!style.transform=="NULL")element.style.transform= style.transform;
-  if(!style.display=="NULL")element.style.display= style.display;
-  if(!style.justifyContent=="NULL")element.style.justifyContent= style.justifyContent;
-  if(!style.alignItems=="NULL")element.style.alignItems= style.alignItems;
+  // if(!style.width=="NULL")element.style.width= style.width;
+  // if(!style.height=="NULL")element.style.height= style.height;
+  // if(!style.backgrounColor=="NULL")element.style.backgroundColor= style.backgroundColor;
+  // if(!style.border=="NULL")element.style.border= style.border;
+  // if(!style.borderRadius=="NULL")element.style.borderRadius= style.borderRadius;
+  // if(!style.position=="NULL")element.style.position= style.position;
+  // if(!style.bottom=="NULL")element.style.bottom= style.bottom;
+  // if(!style.left=="NULL")element.style.left= style.left;
+  // if(!style.transform=="NULL")element.style.transform= style.transform;
+  // if(!style.display=="NULL")element.style.display= style.display;
+  // if(!style.justifyContent=="NULL")element.style.justifyContent= style.justifyContent;
+  // if(!style.alignItems=="NULL")element.style.alignItems= style.alignItems;
 
 }
 
@@ -174,7 +174,13 @@ function createRightSect(){
 /* root 엘리멘트 영역 생성 */
 // root 생성 및 스타일링
 let root=document.getElementById("root");
-root.style.backgroundColor=rootSt.backgroundColor;
+console.log(!rootSt.width=="NULL");
+
+
+
+
+
+
 setStyle(root,rootSt);
 
 // main 생성 및 스타일링
