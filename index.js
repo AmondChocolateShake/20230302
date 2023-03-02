@@ -4,7 +4,7 @@ const moveBtnSt={
   width: "200px",
   height: "200px",
   backgroundColor: "#fff",
-  border:"NULL",
+  border:"0",
   borderRadius: "50%",
   position: "fixed",
   bottom: "10px",
@@ -20,12 +20,12 @@ const rootSt={
   width: "100vw",
   height: "100vh",
   backgroundColor: "cadetblue",
-  border:"NULL",
-  borderRadius: "NULL",
-  position: "NULL",
-  bottom: "NULL",
-  left: "NULL",
-  transform: "NULL",
+  border:"0",
+  borderRadius: "0",
+  position: "0",
+  bottom: "0",
+  left: "0",
+  transform: "0",
   /* flex-set */
   display: "flex",
   justifyContent: "center",
@@ -35,13 +35,13 @@ const rootSt={
 const mainSt={
   width: "500px",
   height: "500px",  
-  backgroundColor: "NULL",
+  backgroundColor: "0",
   border: "1px dotted black",
-  borderRadius: "NULL",
-  position: "NULL",
-  bottom: "NULL",
-  left: "NULL",
-  transform: "NULL",
+  borderRadius: "0",
+  position: "0",
+  bottom: "0",
+  left: "0",
+  transform: "0",
   /* flex-set */
   display: "flex",
   justifyContent: "center",
@@ -49,15 +49,15 @@ const mainSt={
 }
 
 const sectionSt={
-  width: "NULL",
-  height: "NULL",  
-  backgroundColor: "NULL",
-  border: "NULL",
-  borderRadius: "NULL",
-  position: "NULL",
-  bottom: "NULL",
-  left: "NULL",
-  transform: "NULL",
+  width: "0",
+  height: "0",  
+  backgroundColor: "0",
+  border: "0",
+  borderRadius: "0",
+  position: "0",
+  bottom: "0",
+  left: "0",
+  transform: "0",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -68,11 +68,11 @@ const listSt={
   height: "50px",
   backgroundColor: "#fff",
   border: "1px solid black",
-  borderRadius: "NULL",
-  position: "NULL",
-  bottom: "NULL",
-  left: "NULL",
-  transform: "NULL",
+  borderRadius: "0",
+  position: "0",
+  bottom: "0",
+  left: "0",
+  transform: "0",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -81,31 +81,31 @@ const listSt={
 const firstSectionChildSt={
   width: "200px",
   height: "450px",
-  backgroundColor: "NULL",
+  backgroundColor: "0",
   border: "1px solid black",
-  borderRadius: "NULL",
-  position: "NULL",
-  bottom: "NULL",
-  left: "NULL",
-  transform: "NULL",
-  display: "NULL",
-  justifyContent: "NULL",
-  alignItems: "NULL"
+  borderRadius: "0",
+  position: "0",
+  bottom: "0",
+  left: "0",
+  transform: "0",
+  display: "0",
+  justifyContent: "0",
+  alignItems: "0"
 }
 
 const lastSectionChildSt={
   width: "200px",
   height: "450px",
-  backgroundColor: "NULL",  
+  backgroundColor: "0",  
   border: "1px solid blue",
-  borderRadius: "NULL",
-  position: "NULL",
-  bottom: "NULL",
-  left: "NULL",
-  transform: "NULL",
-  display: "NULL",
-  justifyContent: "NULL",
-  alignItems: "NULL"
+  borderRadius: "0",
+  position: "0",
+  bottom: "0",
+  left: "0",
+  transform: "0",
+  display: "0",
+  justifyContent: "0",
+  alignItems: "0"
 }
 
 
@@ -120,18 +120,18 @@ function CreateNewElement(EName){
 
 
 function setStyle(element,style){
-  // if(!style.width=="NULL")element.style.width= style.width;
-  // if(!style.height=="NULL")element.style.height= style.height;
-  // if(!style.backgrounColor=="NULL")element.style.backgroundColor= style.backgroundColor;
-  // if(!style.border=="NULL")element.style.border= style.border;
-  // if(!style.borderRadius=="NULL")element.style.borderRadius= style.borderRadius;
-  // if(!style.position=="NULL")element.style.position= style.position;
-  // if(!style.bottom=="NULL")element.style.bottom= style.bottom;
-  // if(!style.left=="NULL")element.style.left= style.left;
-  // if(!style.transform=="NULL")element.style.transform= style.transform;
-  // if(!style.display=="NULL")element.style.display= style.display;
-  // if(!style.justifyContent=="NULL")element.style.justifyContent= style.justifyContent;
-  // if(!style.alignItems=="NULL")element.style.alignItems= style.alignItems;
+  if(!style.width=="0")element.style.width= style.width;
+  if(!style.height=="0")element.style.height= style.height;
+  if(!style.backgrounColor=="0")element.style.backgroundColor= style.backgroundColor;
+  if(!style.border=="0")element.style.border= style.border;
+  if(!style.borderRadius=="0")element.style.borderRadius= style.borderRadius;
+  if(!style.position=="0")element.style.position= style.position;
+  if(!style.bottom=="0")element.style.bottom= style.bottom;
+  if(!style.left=="0")element.style.left= style.left;
+  if(!style.transform=="0")element.style.transform= style.transform;
+  if(!style.display=="0")element.style.display= style.display;
+  if(!style.justifyContent=="0")element.style.justifyContent= style.justifyContent;
+  if(!style.alignItems=="0")element.style.alignItems= style.alignItems;
 
 }
 
@@ -174,13 +174,6 @@ function createRightSect(){
 /* root 엘리멘트 영역 생성 */
 // root 생성 및 스타일링
 let root=document.getElementById("root");
-console.log(!rootSt.width=="NULL");
-
-
-
-
-
-
 setStyle(root,rootSt);
 
 // main 생성 및 스타일링
@@ -195,6 +188,7 @@ setStyle(rightSect,sectionSt);
 
 main.appendChild(leftSect);
 main.appendChild(rightSect);
+root.appendChild(main);
 
 /* move button 영역 생성 */
 let mBtn=document.getElementById("move-btn");
