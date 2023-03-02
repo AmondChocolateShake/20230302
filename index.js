@@ -168,12 +168,6 @@ function createRightSect(){
   return rightElement;
 }
 
-function sectionInit(element){
-  element.style.display= flex;
-  element.style.justifyContent= center;
-  element.style.alignItems= center;
-
-}
 
 
 /* root 엘리멘트 영역 생성 */
